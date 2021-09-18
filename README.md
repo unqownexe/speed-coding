@@ -1,8 +1,3 @@
-# speed-coding
+# Speed-Coding by Unqown Exe
 
-Serimizin ilk videosu, Index.js adlı dosyada değiştirmeniz gereken birkaç yer var! İyi günlerde kullanın...
-
-<h1>
--Unqown Exe-
-  
-  </h1>
+Serimizde, çeşitli altyapıları hızlı bir şekilde kodlamaya çalışıyorum. Bi' nevi meydan okuma.
