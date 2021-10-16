@@ -5,6 +5,10 @@ const dbutton = require("discord-buttons")
 client.login("")
 dbutton(client)
 
+let ayarlar = {
+"üye": "üyerolid"
+}
+
 client.on("clickButton", async(button) =>{
     if(button.id == "kayit"){
         await button.reply.defer()
@@ -44,6 +48,7 @@ client.on("clickButton", async(button) =>{
                 if(button2.id == "succesfully"){
                     await button2.reply.edit("Kayıt başarılı")
                     await msg.delete().catch();
+	    	    await msg.member.roles.add(ayarlar.üye);
                     await Collector.stop()
                     return
                 }else if(button2.id == "unsuccesfully"){
@@ -85,7 +90,8 @@ client.on("clickButton", async(button) =>{
         await button2.reply.think(true)
         if(button2.id == "succesfully"){
             await button2.reply.edit("Kayıt başarılı")
-            await msg.delete().catch();
+            await msg.delete().catch()
+	    await msg.member.roles.add(ayarlar.üye);
             await Collector.stop()
             return
         }else if(button2.id == "unsuccesfully"){
@@ -129,6 +135,7 @@ client.on("clickButton", async(button) =>{
             await button2.reply.edit("Kayıt başarılı")
             await msg.delete().catch();
             await Collector.stop()
+	    await msg.member.roles.add(ayarlar.üye);
             return
         }else if(button2.id == "unsuccesfully"){
 
